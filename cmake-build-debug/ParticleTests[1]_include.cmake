@@ -1,0 +1,5 @@
+if(EXISTS "/home/s5603002/Simulations/SimulationProject/cmake-build-debug/ParticleTests[1]_tests.cmake")
+  include("/home/s5603002/Simulations/SimulationProject/cmake-build-debug/ParticleTests[1]_tests.cmake")
+else()
+  add_test(ParticleTests_NOT_BUILT ParticleTests_NOT_BUILT)
+endif()

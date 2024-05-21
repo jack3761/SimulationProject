@@ -1,0 +1,624 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      The system is: Linux - 4.18.0-477.10.1.el8_8.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /opt/rh/gcc-toolset-12/root/usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /opt/rh/gcc-toolset-12/root/usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k9uDf2"
+      binary: "/home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k9uDf2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-linux"
+      Z_VCPKG_ROOT_DIR: "/public/devel/23-24/vcpkg"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k9uDf2
+        
+        Run Build Command(s):/public/devel/23-24/clion/bin/ninja/linux/x64/ninja -v cmTC_df901 && [1/2] /opt/rh/gcc-toolset-12/root/usr/bin/cc   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.o -c /public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/opt/rh/gcc-toolset-12/root/usr/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/gcc-toolset-12/root/usr --mandir=/opt/rh/gcc-toolset-12/root/usr/share/man --infodir=/opt/rh/gcc-toolset-12/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-12.2.1-20221121/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none --without-cuda-driver --enable-offload-defaulted --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 12.2.1 20221121 (Red Hat 12.2.1-7) (GCC) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_df901.dir/'
+         /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/cc1 -quiet -v /public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_df901.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/ccVkqcow.s
+        GNU C17 (GCC) version 12.2.1 20221121 (Red Hat 12.2.1-7) (x86_64-redhat-linux)
+        	compiled by GNU C version 12.2.1 20221121 (Red Hat 12.2.1-7), GMP version 6.1.2, MPFR version 3.1.6-p2, MPC version 1.1.0, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include-fixed"
+        ignoring nonexistent directory "/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../x86_64-redhat-linux/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/local/cuda-12/include
+         .
+         /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include
+         /usr/local/include
+         /opt/rh/gcc-toolset-12/root/usr/include
+         /usr/include
+        End of search list.
+        GNU C17 (GCC) version 12.2.1 20221121 (Red Hat 12.2.1-7) (x86_64-redhat-linux)
+        	compiled by GNU C version 12.2.1 20221121 (Red Hat 12.2.1-7), GMP version 6.1.2, MPFR version 3.1.6-p2, MPC version 1.1.0, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 54c4f1d3a0a3eba603d2e8cfa867cdf6
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_df901.dir/'
+         /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/as -v --64 -o CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.o /tmp/ccVkqcow.s
+        GNU assembler version 2.38 (x86_64-redhat-linux) using BFD version version 2.38-17.el8
+        COMPILER_PATH=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /opt/rh/gcc-toolset-12/root/usr/bin/cc  -v CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.o -o cmTC_df901   && :
+        Using built-in specs.
+        COLLECT_GCC=/opt/rh/gcc-toolset-12/root/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/gcc-toolset-12/root/usr --mandir=/opt/rh/gcc-toolset-12/root/usr/share/man --infodir=/opt/rh/gcc-toolset-12/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-12.2.1-20221121/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none --without-cuda-driver --enable-offload-defaulted --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 12.2.1 20221121 (Red Hat 12.2.1-7) (GCC) 
+        COMPILER_PATH=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_df901' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_df901.'
+         /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/collect2 -plugin /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/liblto_plugin.so -plugin-opt=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper -plugin-opt=-fresolution=/tmp/cc81AroX.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_df901 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o -L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12 -L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../.. CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtend.o /lib/../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_df901' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_df901.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/local/cuda-12/include]
+          add: [.]
+          add: [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include]
+          add: [/usr/local/include]
+          add: [/opt/rh/gcc-toolset-12/root/usr/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/local/cuda-12/include] ==> [/usr/local/cuda-12/include]
+        skipping relative include dir [.]
+        collapse include dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include] ==> [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/opt/rh/gcc-toolset-12/root/usr/include] ==> [/opt/rh/gcc-toolset-12/root/usr/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/local/cuda-12/include;/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include;/usr/local/include;/opt/rh/gcc-toolset-12/root/usr/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-k9uDf2]
+        ignore line: []
+        ignore line: [Run Build Command(s):/public/devel/23-24/clion/bin/ninja/linux/x64/ninja -v cmTC_df901 && [1/2] /opt/rh/gcc-toolset-12/root/usr/bin/cc   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.o -c /public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/rh/gcc-toolset-12/root/usr/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/opt/rh/gcc-toolset-12/root/usr --mandir=/opt/rh/gcc-toolset-12/root/usr/share/man --infodir=/opt/rh/gcc-toolset-12/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-12.2.1-20221121/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none --without-cuda-driver --enable-offload-defaulted --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 12.2.1 20221121 (Red Hat 12.2.1-7) (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_df901.dir/']
+        ignore line: [ /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/cc1 -quiet -v /public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_df901.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/ccVkqcow.s]
+        ignore line: [GNU C17 (GCC) version 12.2.1 20221121 (Red Hat 12.2.1-7) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 12.2.1 20221121 (Red Hat 12.2.1-7)  GMP version 6.1.2  MPFR version 3.1.6-p2  MPC version 1.1.0  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../x86_64-redhat-linux/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/local/cuda-12/include]
+        ignore line: [ .]
+        ignore line: [ /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /opt/rh/gcc-toolset-12/root/usr/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (GCC) version 12.2.1 20221121 (Red Hat 12.2.1-7) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 12.2.1 20221121 (Red Hat 12.2.1-7)  GMP version 6.1.2  MPFR version 3.1.6-p2  MPC version 1.1.0  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 54c4f1d3a0a3eba603d2e8cfa867cdf6]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_df901.dir/']
+        ignore line: [ /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/as -v --64 -o CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.o /tmp/ccVkqcow.s]
+        ignore line: [GNU assembler version 2.38 (x86_64-redhat-linux) using BFD version version 2.38-17.el8]
+        ignore line: [COMPILER_PATH=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /opt/rh/gcc-toolset-12/root/usr/bin/cc  -v CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.o -o cmTC_df901   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/rh/gcc-toolset-12/root/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/opt/rh/gcc-toolset-12/root/usr --mandir=/opt/rh/gcc-toolset-12/root/usr/share/man --infodir=/opt/rh/gcc-toolset-12/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-12.2.1-20221121/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none --without-cuda-driver --enable-offload-defaulted --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 12.2.1 20221121 (Red Hat 12.2.1-7) (GCC) ]
+        ignore line: [COMPILER_PATH=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_df901' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_df901.']
+        link line: [ /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/collect2 -plugin /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/liblto_plugin.so -plugin-opt=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper -plugin-opt=-fresolution=/tmp/cc81AroX.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_df901 /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o -L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12 -L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../.. CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtend.o /lib/../lib64/crtn.o]
+          arg [/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc81AroX.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--no-add-needed] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_df901] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o] ==> obj [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o]
+          arg [-L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12] ==> dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12]
+          arg [-L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64] ==> dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../..] ==> dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../..]
+          arg [CMakeFiles/cmTC_df901.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtend.o] ==> obj [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12] ==> [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12]
+        collapse library dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64] ==> [/opt/rh/gcc-toolset-12/root/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../..] ==> [/opt/rh/gcc-toolset-12/root/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o;/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12;/opt/rh/gcc-toolset-12/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/gcc-toolset-12/root/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HuzHRl"
+      binary: "/home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HuzHRl"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-linux"
+      Z_VCPKG_ROOT_DIR: "/public/devel/23-24/vcpkg"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HuzHRl
+        
+        Run Build Command(s):/public/devel/23-24/clion/bin/ninja/linux/x64/ninja -v cmTC_032ef && [1/2] /opt/rh/gcc-toolset-12/root/usr/bin/c++   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.o -c /public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/opt/rh/gcc-toolset-12/root/usr/bin/c++
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/gcc-toolset-12/root/usr --mandir=/opt/rh/gcc-toolset-12/root/usr/share/man --infodir=/opt/rh/gcc-toolset-12/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-12.2.1-20221121/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none --without-cuda-driver --enable-offload-defaulted --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 12.2.1 20221121 (Red Hat 12.2.1-7) (GCC) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_032ef.dir/'
+         /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/cc1plus -quiet -v -D_GNU_SOURCE /public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_032ef.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/cclOsgI6.s
+        GNU C++17 (GCC) version 12.2.1 20221121 (Red Hat 12.2.1-7) (x86_64-redhat-linux)
+        	compiled by GNU C version 12.2.1 20221121 (Red Hat 12.2.1-7), GMP version 6.1.2, MPFR version 3.1.6-p2, MPC version 1.1.0, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include-fixed"
+        ignoring nonexistent directory "/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../x86_64-redhat-linux/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/local/cuda-12/include
+         .
+         /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12
+         /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12/x86_64-redhat-linux
+         /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12/backward
+         /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include
+         /usr/local/include
+         /opt/rh/gcc-toolset-12/root/usr/include
+         /usr/include
+        End of search list.
+        GNU C++17 (GCC) version 12.2.1 20221121 (Red Hat 12.2.1-7) (x86_64-redhat-linux)
+        	compiled by GNU C version 12.2.1 20221121 (Red Hat 12.2.1-7), GMP version 6.1.2, MPFR version 3.1.6-p2, MPC version 1.1.0, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: eb2d704c0bf7351e4670621b52ac6c23
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_032ef.dir/'
+         /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/as -v --64 -o CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.o /tmp/cclOsgI6.s
+        GNU assembler version 2.38 (x86_64-redhat-linux) using BFD version version 2.38-17.el8
+        COMPILER_PATH=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /opt/rh/gcc-toolset-12/root/usr/bin/c++  -v CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_032ef   && :
+        Using built-in specs.
+        COLLECT_GCC=/opt/rh/gcc-toolset-12/root/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/opt/rh/gcc-toolset-12/root/usr --mandir=/opt/rh/gcc-toolset-12/root/usr/share/man --infodir=/opt/rh/gcc-toolset-12/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-12.2.1-20221121/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none --without-cuda-driver --enable-offload-defaulted --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 12.2.1 20221121 (Red Hat 12.2.1-7) (GCC) 
+        COMPILER_PATH=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_032ef' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_032ef.'
+         /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/collect2 -plugin /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/liblto_plugin.so -plugin-opt=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccyzB8u8.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_032ef /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o -L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12 -L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../.. CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtend.o /lib/../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_032ef' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_032ef.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/local/cuda-12/include]
+          add: [.]
+          add: [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12]
+          add: [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12/x86_64-redhat-linux]
+          add: [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12/backward]
+          add: [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include]
+          add: [/usr/local/include]
+          add: [/opt/rh/gcc-toolset-12/root/usr/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/local/cuda-12/include] ==> [/usr/local/cuda-12/include]
+        skipping relative include dir [.]
+        collapse include dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12] ==> [/opt/rh/gcc-toolset-12/root/usr/include/c++/12]
+        collapse include dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12/x86_64-redhat-linux] ==> [/opt/rh/gcc-toolset-12/root/usr/include/c++/12/x86_64-redhat-linux]
+        collapse include dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12/backward] ==> [/opt/rh/gcc-toolset-12/root/usr/include/c++/12/backward]
+        collapse include dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include] ==> [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/opt/rh/gcc-toolset-12/root/usr/include] ==> [/opt/rh/gcc-toolset-12/root/usr/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/local/cuda-12/include;/opt/rh/gcc-toolset-12/root/usr/include/c++/12;/opt/rh/gcc-toolset-12/root/usr/include/c++/12/x86_64-redhat-linux;/opt/rh/gcc-toolset-12/root/usr/include/c++/12/backward;/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include;/usr/local/include;/opt/rh/gcc-toolset-12/root/usr/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-HuzHRl]
+        ignore line: []
+        ignore line: [Run Build Command(s):/public/devel/23-24/clion/bin/ninja/linux/x64/ninja -v cmTC_032ef && [1/2] /opt/rh/gcc-toolset-12/root/usr/bin/c++   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.o -c /public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/rh/gcc-toolset-12/root/usr/bin/c++]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/opt/rh/gcc-toolset-12/root/usr --mandir=/opt/rh/gcc-toolset-12/root/usr/share/man --infodir=/opt/rh/gcc-toolset-12/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-12.2.1-20221121/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none --without-cuda-driver --enable-offload-defaulted --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 12.2.1 20221121 (Red Hat 12.2.1-7) (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_032ef.dir/']
+        ignore line: [ /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/cc1plus -quiet -v -D_GNU_SOURCE /public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_032ef.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o /tmp/cclOsgI6.s]
+        ignore line: [GNU C++17 (GCC) version 12.2.1 20221121 (Red Hat 12.2.1-7) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 12.2.1 20221121 (Red Hat 12.2.1-7)  GMP version 6.1.2  MPFR version 3.1.6-p2  MPC version 1.1.0  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../x86_64-redhat-linux/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/local/cuda-12/include]
+        ignore line: [ .]
+        ignore line: [ /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12]
+        ignore line: [ /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12/x86_64-redhat-linux]
+        ignore line: [ /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12/backward]
+        ignore line: [ /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /opt/rh/gcc-toolset-12/root/usr/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (GCC) version 12.2.1 20221121 (Red Hat 12.2.1-7) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 12.2.1 20221121 (Red Hat 12.2.1-7)  GMP version 6.1.2  MPFR version 3.1.6-p2  MPC version 1.1.0  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: eb2d704c0bf7351e4670621b52ac6c23]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_032ef.dir/']
+        ignore line: [ /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/as -v --64 -o CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.o /tmp/cclOsgI6.s]
+        ignore line: [GNU assembler version 2.38 (x86_64-redhat-linux) using BFD version version 2.38-17.el8]
+        ignore line: [COMPILER_PATH=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /opt/rh/gcc-toolset-12/root/usr/bin/c++  -v CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_032ef   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/opt/rh/gcc-toolset-12/root/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/opt/rh/gcc-toolset-12/root/usr --mandir=/opt/rh/gcc-toolset-12/root/usr/share/man --infodir=/opt/rh/gcc-toolset-12/root/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-12.2.1-20221121/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none --without-cuda-driver --enable-offload-defaulted --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 12.2.1 20221121 (Red Hat 12.2.1-7) (GCC) ]
+        ignore line: [COMPILER_PATH=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_032ef' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_032ef.']
+        link line: [ /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/collect2 -plugin /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/liblto_plugin.so -plugin-opt=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper -plugin-opt=-fresolution=/tmp/ccyzB8u8.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_032ef /lib/../lib64/crt1.o /lib/../lib64/crti.o /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o -L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12 -L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../.. CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtend.o /lib/../lib64/crtn.o]
+          arg [/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccyzB8u8.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--no-add-needed] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_032ef] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o] ==> obj [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o]
+          arg [-L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12] ==> dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12]
+          arg [-L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64] ==> dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../..] ==> dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../..]
+          arg [CMakeFiles/cmTC_032ef.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtend.o] ==> obj [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12] ==> [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12]
+        collapse library dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../../../lib64] ==> [/opt/rh/gcc-toolset-12/root/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/../../..] ==> [/opt/rh/gcc-toolset-12/root/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtbegin.o;/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/opt/rh/gcc-toolset-12/root/usr/lib/gcc/x86_64-redhat-linux/12;/opt/rh/gcc-toolset-12/root/usr/lib64;/lib64;/usr/lib64;/opt/rh/gcc-toolset-12/root/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/public/devel/23-24/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/public/devel/23-24/vcpkg/installed/x64-linux/share/gtest/GTestConfig.cmake:29 (find_dependency)"
+      - "/public/devel/23-24/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
+      - "CMakeLists.txt:25 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TcpBVM"
+      binary: "/home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TcpBVM"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-linux"
+      Z_VCPKG_ROOT_DIR: "/public/devel/23-24/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: /home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TcpBVM
+        
+        Run Build Command(s):/public/devel/23-24/clion/bin/ninja/linux/x64/ninja -v cmTC_23e5b && [1/2] /opt/rh/gcc-toolset-12/root/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fdiagnostics-color=always -o CMakeFiles/cmTC_23e5b.dir/src.c.o -c /home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-TcpBVM/src.c
+        [2/2] : && /opt/rh/gcc-toolset-12/root/usr/bin/cc   CMakeFiles/cmTC_23e5b.dir/src.c.o -o cmTC_23e5b   && :
+        FAILED: cmTC_23e5b 
+        : && /opt/rh/gcc-toolset-12/root/usr/bin/cc   CMakeFiles/cmTC_23e5b.dir/src.c.o -o cmTC_23e5b   && :
+        /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/ld: CMakeFiles/cmTC_23e5b.dir/src.c.o: in function `main':
+        src.c:(.text+0x2d): undefined reference to `pthread_create'
+        /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/ld: src.c:(.text+0x39): undefined reference to `pthread_detach'
+        /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/ld: src.c:(.text+0x45): undefined reference to `pthread_cancel'
+        /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/ld: src.c:(.text+0x56): undefined reference to `pthread_join'
+        collect2: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "/public/devel/23-24/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/public/devel/23-24/vcpkg/installed/x64-linux/share/gtest/GTestConfig.cmake:29 (find_dependency)"
+      - "/public/devel/23-24/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
+      - "CMakeLists.txt:25 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "/home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4ox5j8"
+      binary: "/home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4ox5j8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-linux"
+      Z_VCPKG_ROOT_DIR: "/public/devel/23-24/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: /home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4ox5j8
+        
+        Run Build Command(s):/public/devel/23-24/clion/bin/ninja/linux/x64/ninja -v cmTC_3b6c4 && [1/2] /opt/rh/gcc-toolset-12/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -fdiagnostics-color=always -o CMakeFiles/cmTC_3b6c4.dir/CheckFunctionExists.c.o -c /home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-4ox5j8/CheckFunctionExists.c
+        [2/2] : && /opt/rh/gcc-toolset-12/root/usr/bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create  CMakeFiles/cmTC_3b6c4.dir/CheckFunctionExists.c.o -o cmTC_3b6c4  -lpthreads && :
+        FAILED: cmTC_3b6c4 
+        : && /opt/rh/gcc-toolset-12/root/usr/bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create  CMakeFiles/cmTC_3b6c4.dir/CheckFunctionExists.c.o -o cmTC_3b6c4  -lpthreads && :
+        /opt/rh/gcc-toolset-12/root/usr/libexec/gcc/x86_64-redhat-linux/12/ld: cannot find -lpthreads: No such file or directory
+        collect2: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake:71 (try_compile)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "/public/devel/23-24/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
+      - "/public/devel/23-24/clion/bin/cmake/linux/x64/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/public/devel/23-24/vcpkg/installed/x64-linux/share/gtest/GTestConfig.cmake:29 (find_dependency)"
+      - "/public/devel/23-24/vcpkg/scripts/buildsystems/vcpkg.cmake:859 (_find_package)"
+      - "CMakeLists.txt:25 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "/home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zkUyzS"
+      binary: "/home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zkUyzS"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      VCPKG_APPLOCAL_DEPS: "ON"
+      VCPKG_TARGET_TRIPLET: "x64-linux"
+      Z_VCPKG_ROOT_DIR: "/public/devel/23-24/vcpkg"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: /home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zkUyzS
+        
+        Run Build Command(s):/public/devel/23-24/clion/bin/ninja/linux/x64/ninja -v cmTC_f0c38 && [1/2] /opt/rh/gcc-toolset-12/root/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -fdiagnostics-color=always -o CMakeFiles/cmTC_f0c38.dir/CheckFunctionExists.c.o -c /home/s5603002/Simulations/SimulationProject/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-zkUyzS/CheckFunctionExists.c
+        [2/2] : && /opt/rh/gcc-toolset-12/root/usr/bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create  CMakeFiles/cmTC_f0c38.dir/CheckFunctionExists.c.o -o cmTC_f0c38  -lpthread && :
+        
+      exitCode: 0
+...
