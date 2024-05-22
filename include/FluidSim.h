@@ -2,6 +2,9 @@
 #define FLUIDSIM_H_
 #include <cstdlib>
 #include <vector>
+#include "Particle.h"
+#include "FluidCell.h"
+#include "Vec3.h"
 //#include <string_view>
 
 
@@ -21,6 +24,12 @@ public:
 //    void updateCellColors();
     void simulate(float _dt, float _gravity, float _flipRatio, size_t _numIterations, float _overRelaxation, bool _compensateDrift, bool _seperateParticles, float _obstacleX, float _obstacleY, float _obstacleRadius, int step);
     void writeGeo(std::string_view fileName) const;
+    void setParticlePos(size_t _index, float _pos);
+    void setNumParticles(size_t _numParticles);
+    void setS(size_t _index, float _s);
+    void setParticles();
+    int getfNumX();
+    int getfNumY();
 
 private:
     float m_density;
@@ -39,6 +48,10 @@ private:
     int const m_fluidCell = 0;
     int const m_airCell = 1;
     int const m_solidCell = 2;
+
+    std::vector<FluidCell> m_fluidCells;
+    std::vector<Particle> m_particles;
+
 
     // update with the changes we make to the original code
     std::vector<float> m_u;

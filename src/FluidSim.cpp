@@ -7,16 +7,13 @@
 
 FluidSim::FluidSim(float _density, float _width, float _height, float _spacing, float _particleRadius, size_t _maxParticles)
 {
-    std::cout<<"yo yo ";
     m_density = _density;
     m_fNumX = std::floor(_width / _spacing) + 1;
     m_fNumY = std::floor(_height / _spacing) + 1;
     m_h = std::max(_width / m_fNumX, _height / m_fNumY);
-    // maybe delete?
     m_fInvSpacing = 1.0f / m_h;
     m_fNumCells = m_fNumX * m_fNumY;
 
-    // fix narrowing conversion
     m_u.resize(m_fNumCells);
     m_v.resize(m_fNumCells);
     m_du.resize(m_fNumCells);
@@ -60,6 +57,9 @@ void FluidSim::integrateParticles(float _dt, float _gravity)
         m_particleVel[2 * i + 1] += _dt * _gravity;
         m_particlePos[2 * i] += m_particleVel[2 * i] * _dt;
         m_particlePos[2 * i + 1] += m_particleVel[2 * i + 1] * _dt;
+
+//        m_particles[i].vel.y += _dt * _gravity;
+//        m_particles[i].pos.x =
     }
 }
 
@@ -457,7 +457,7 @@ void FluidSim::simulate(float _dt, float _gravity, float _flipRatio, size_t _num
         solveIncompressibility(_numIterations, sdt, _overRelaxation);
         transferVelocities(false, _flipRatio);
 
-        writeGeo(fmt::format("/transfer/fluid/particle.{:04d}.geo", step));
+//        writeGeo(fmt::format("/transfer/fluid/particle.{:04d}.geo", step));
 //    }
 }
 
@@ -498,7 +498,37 @@ void FluidSim::writeGeo(std::string_view fileName) const
     file<<"[0]\n";
     file<<"beginExtra\nendExtra\n";
 
-    std::cout<< fileName.data() << "\n";
+//    std::cout<< fileName.data() << "\n";
 
     file.close();
+}
+
+void FluidSim::setNumParticles(size_t _numParticles)
+{
+    m_numParticles = _numParticles;
+}
+
+void FluidSim::setParticlePos(size_t _index, float _pos)
+{
+    m_particlePos[_index] = _pos;
+}
+
+void FluidSim::setS(size_t _index, float _s)
+{
+    m_s[_index] = _s;
+}
+
+void FluidSim::setParticles()
+{
+    m_particles.resize(m_numParticles);
+}
+
+int FluidSim::getfNumX()
+{
+    return m_fNumX;
+}
+
+int FluidSim::getfNumY()
+{
+    return m_fNumY;
 }
