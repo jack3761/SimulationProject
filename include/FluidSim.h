@@ -15,19 +15,15 @@ public:
     FluidSim(float _density, float _width, float _height, float _spacing, float _particleRadius, size_t _maxParticles);
     void integrateParticles(float _dt, float _gravity);
     void pushParticlesApart(size_t _numIterations);
-    void handleParticleCollisions(float _obstacleX, float _obstacleY, float _obstacleRadius);
+    void handleParticleCollisions();
     void updateParticleDensity();
     void transferVelocities(bool _toGrid, float _flipRatio);
     void solveIncompressibility(size_t _numIterations, float _dt, float _overRelaxation);
-//    void updateParticleColors();
-//    void setSciColor(size_t _cellNr, float _val, float _minVal, float _maxVal);
-//    void updateCellColors();
-    void simulate(float _dt, float _gravity, float _flipRatio, size_t _numIterations, float _overRelaxation, bool _compensateDrift, bool _seperateParticles, float _obstacleX, float _obstacleY, float _obstacleRadius, int step);
+    void simulate(float _dt, float _gravity, float _flipRatio, size_t _numPressureIterations, size_t _numParticleIterations, float _overRelaxation, int subSteps);
     void writeGeo(std::string_view fileName) const;
     void setParticlePos(size_t _index, float _pos);
     void setNumParticles(size_t _numParticles);
     void setS(size_t _index, float _s);
-    void setParticles();
     int getfNumX();
     int getfNumY();
 
@@ -52,8 +48,6 @@ private:
     std::vector<FluidCell> m_fluidCells;
     std::vector<Particle> m_particles;
 
-
-    // update with the changes we make to the original code
     std::vector<float> m_u;
     std::vector<float> m_v;
     std::vector<float> m_du;
@@ -63,10 +57,8 @@ private:
     std::vector<float> m_p;
     std::vector<float> m_s;
     std::vector<int> m_cellType;
-    std::vector<float> m_cellColor;
 
     std::vector<float> m_particlePos;
-    std::vector<float> m_particleColor;
     std::vector<float> m_particleVel;
     std::vector<float> m_particleDensity;
     float m_particleRestDensity;

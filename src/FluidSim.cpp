@@ -7,13 +7,20 @@
 
 FluidSim::FluidSim(float _density, float _width, float _height, float _spacing, float _particleRadius, size_t _maxParticles)
 {
+    // density of the liquid
     m_density = _density;
+
+    // x and y for number of cells in sim
     m_fNumX = std::floor(_width / _spacing) + 1;
     m_fNumY = std::floor(_height / _spacing) + 1;
+
+    // calculates grid cell size
     m_h = std::max(_width / m_fNumX, _height / m_fNumY);
+    // used to convert position in space to grid index easily
     m_fInvSpacing = 1.0f / m_h;
     m_fNumCells = m_fNumX * m_fNumY;
 
+    // set up cell variables
     m_u.resize(m_fNumCells);
     m_v.resize(m_fNumCells);
     m_du.resize(m_fNumCells);
@@ -23,16 +30,11 @@ FluidSim::FluidSim(float _density, float _width, float _height, float _spacing, 
     m_p.resize(m_fNumCells);
     m_s.resize(m_fNumCells);
     m_cellType.resize(m_fNumCells);
-    m_cellColor.resize(3 * m_fNumCells);
 
+    // set up particles and variables
     m_maxParticles = _maxParticles;
 
     m_particlePos.resize(2 * m_maxParticles);
-    m_particleColor.resize(3 * m_maxParticles);
-    for (size_t i=0; i<m_maxParticles; i++)
-    {
-        m_particleColor[3 * i + 2] = 1.0;
-    }
     m_particleVel.resize(2*m_maxParticles);
     m_particleDensity.resize(m_fNumCells);
     m_particleRestDensity = 0.0;
@@ -43,6 +45,7 @@ FluidSim::FluidSim(float _density, float _width, float _height, float _spacing, 
     m_pNumY = std::floor(_height / m_pInvSpacing) + 1;
     m_pNumCells = m_pNumX * m_pNumY;
 
+    // used to determine which particles are in a cell
     m_numCellParticles.resize(m_pNumCells);
     m_firstCellParticle.resize(m_pNumCells + 1);
     m_cellParticleIds.resize(m_maxParticles);
@@ -52,14 +55,12 @@ FluidSim::FluidSim(float _density, float _width, float _height, float _spacing, 
 
 void FluidSim::integrateParticles(float _dt, float _gravity)
 {
+    // apply gravity to particles
     for (size_t i=0; i<m_numParticles; i++)
     {
         m_particleVel[2 * i + 1] += _dt * _gravity;
         m_particlePos[2 * i] += m_particleVel[2 * i] * _dt;
         m_particlePos[2 * i + 1] += m_particleVel[2 * i + 1] * _dt;
-
-//        m_particles[i].vel.y += _dt * _gravity;
-//        m_particles[i].pos.x =
     }
 }
 
@@ -95,6 +96,8 @@ void FluidSim::pushParticlesApart(size_t _numIterations)
             float px = m_particlePos[2 * i];
             float py = m_particlePos[2 * i + 1];
 
+            // find neighbouring particles
+
             int pxi = static_cast<int>(std::floor(px * m_pInvSpacing));
             int pyi = static_cast<int>(std::floor(py * m_pInvSpacing));
             int x0 = std::max(static_cast<int>(pxi - 1), 0);
@@ -102,12 +105,16 @@ void FluidSim::pushParticlesApart(size_t _numIterations)
             int x1 = std::min(static_cast<int>(pxi + 1), static_cast<int>(m_pNumX - 1));
             int y1 = std::min(static_cast<int>(pyi + 1), static_cast<int>(m_pNumY - 1));
 
-            for (int xi = x0; xi <= x1; xi++) {
-                for (int yi = y0; yi <= y1; yi++) {
+            // checks if neighbouring particles are too close and pushes them apart if so
+            for (int xi = x0; xi <= x1; xi++)
+            {
+                for (int yi = y0; yi <= y1; yi++)
+                {
                     int cellNr = xi * m_pNumY + yi;
                     int first = m_firstCellParticle[cellNr];
                     int last = m_firstCellParticle[cellNr + 1];
-                    for (int j = first; j < last; j++) {
+                    for (int j = first; j < last; j++)
+                    {
                         int id = m_cellParticleIds[j];
                         if (id == i)
                             continue;
@@ -127,32 +134,19 @@ void FluidSim::pushParticlesApart(size_t _numIterations)
                         m_particlePos[2 * i + 1] -= dy;
                         m_particlePos[2 * id] += dx;
                         m_particlePos[2 * id + 1] += dy;
-
-                        // Diffuse colors
-
-                        for (int k = 0; k < 3; k++) {
-                            float color0 = m_particleColor[3 * i + k];
-                            float color1 = m_particleColor[3 * id + k];
-                            float color = (color0 + color1) * 0.5f;
-                            m_particleColor[3 * i + k] = color0 + (color - color0) * colorDiffusionCoeff;
-                            m_particleColor[3 * id + k] = color1 + (color - color1) * colorDiffusionCoeff;
-                        }
                     }
                 }
             }
-
         }
+
     }
 }
 
-void FluidSim::handleParticleCollisions(float _obstacleX, float _obstacleY, float _obstacleRadius)
+
+void FluidSim::handleParticleCollisions()
 {
     float h = 1.0f / m_fInvSpacing;
     float r = m_particleRadius;
-    float or_ = _obstacleRadius;
-    float or2 = or_ * or_;
-    float minDist = _obstacleRadius + r;
-    float minDist2 = minDist * minDist;
 
     float minX = h + r;
     float maxX = (m_fNumX - 1) * h - r;
@@ -163,17 +157,6 @@ void FluidSim::handleParticleCollisions(float _obstacleX, float _obstacleY, floa
         float x = m_particlePos[2 * i];
         float y = m_particlePos[2 * i + 1];
 
-        float dx = x - _obstacleX;
-        float dy = y - _obstacleY;
-        float d2 = dx * dx + dy * dy;
-
-        // Obstacle collision
-
-//        if (d2 < minDist2) {
-//            // Handle obstacle collision
-//            m_particleVel[2 * i] = scene.obstacleVelX;
-//            m_particleVel[2 * i + 1] = scene.obstacleVelY;
-//        }
 
         // Wall collisions
 
@@ -437,28 +420,24 @@ void FluidSim::solveIncompressibility(size_t _numIterations, float _dt, float _o
     }
 }
 
-void FluidSim::simulate(float _dt, float _gravity, float _flipRatio, size_t _numIterations, float _overRelaxation,
-                        bool _compensateDrift, bool _seperateParticles, float _obstacleX, float _obstacleY,
-                        float _obstacleRadius, int step)
+void FluidSim::simulate(float _dt, float _gravity, float _flipRatio, size_t _numPressureIterations, size_t _numParticleIterations, float _overRelaxation, int subSteps)
 {
-    int subSteps = 1.0;
     float sdt = _dt / static_cast<float>(subSteps);
 
-//    for (int step=0; step<subSteps; step++)
-//    {
+    for (int step=0; step<subSteps; step++)
+    {
         integrateParticles(sdt, _gravity);
-        pushParticlesApart(_numIterations);
-        handleParticleCollisions(_obstacleX, _obstacleY, _obstacleRadius);
+        pushParticlesApart(_numParticleIterations);
+        handleParticleCollisions();
 
         // in original only had the one argument
-        transferVelocities(true, 1);
+        transferVelocities(true, 0);
 
         updateParticleDensity();
-        solveIncompressibility(_numIterations, sdt, _overRelaxation);
+        solveIncompressibility(_numPressureIterations, sdt, _overRelaxation);
         transferVelocities(false, _flipRatio);
 
-//        writeGeo(fmt::format("/transfer/fluid/particle.{:04d}.geo", step));
-//    }
+    }
 }
 
 void FluidSim::writeGeo(std::string_view fileName) const
@@ -472,17 +451,8 @@ void FluidSim::writeGeo(std::string_view fileName) const
     file<<"Cd 3 float 1 1 1\n";
     file<<"pscale 1 float 0.5\n";
     size_t numParts=0;
-//    for (auto p:m_particles)
     for (int i=0; i<m_numParticles; i++)
     {
-//        if (p.alive == ParticleState::Alive)
-//        {
-//            file << p.pos.x << " " << p.pos.y << " " << p.pos.z << " 1.0 (";
-//            file << p.colour.x << " " << p.colour.y << " " << p.colour.z << " ";
-//            file << p.size << ")\n";
-//            ++numParts;
-
-//        }
         file << m_particlePos[2 * i] << " " << m_particlePos[2 * i + 1] << " " << 0 << " 1.0 (";
         file << 0 << " " << 0 << " " << 0 << " ";
         file << 1.0 << ")\n";
@@ -516,11 +486,6 @@ void FluidSim::setParticlePos(size_t _index, float _pos)
 void FluidSim::setS(size_t _index, float _s)
 {
     m_s[_index] = _s;
-}
-
-void FluidSim::setParticles()
-{
-    m_particles.resize(m_numParticles);
 }
 
 int FluidSim::getfNumX()
